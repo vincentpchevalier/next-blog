@@ -19,9 +19,26 @@
 	flex-grow: 1;
 }
 
+.main > *:not(section) {
+	margin-bottom: 1.5rem;
+}
+
+.main h1 {
+	color: goldenrod;
+}
+.main h2 {
+	color: goldenrod;
+	font-size: 2rem;
+}
+
 .navbar ul {
 	display: flex;
 	justify-content: flex-end;
 	gap: 2rem;
 	list-style: none;
+}
+
+.posts li {
+	margin-bottom: 1rem;
+	font-size: 1.4rem;
 }
