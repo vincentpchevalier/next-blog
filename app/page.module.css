@@ -1,0 +1,27 @@
+.container {
+	margin: 0 auto;
+	padding: 0 2rem;
+	max-width: var(--max-width);
+	min-height: 100svh;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	padding: 2rem 0;
+}
+
+.footer {
+	padding: 2rem 0;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.navbar ul {
+	display: flex;
+	justify-content: flex-end;
+	gap: 2rem;
+	list-style: none;
+}
