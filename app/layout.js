@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google';
+import { Merriweather } from 'next/font/google';
 import './globals.css';
 import Container from './components/Container';
 import Header from './components/Header';
@@ -6,7 +6,10 @@ import Footer from './components/Footer';
 
 import styles from './page.module.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const merriweather = Merriweather({
+	subsets: ['latin'],
+	weight: ['300', '400', '700'],
+});
 
 export const metadata = {
 	title: 'NextJS Blog',
@@ -16,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={merriweather.className}>
 				<Container>
 					<Header />
 					{children}
