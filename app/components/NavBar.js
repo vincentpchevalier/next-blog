@@ -7,13 +7,10 @@ function NavBar() {
 		<nav className={styles.navbar}>
 			<ul>
 				<li>
-					<Link>Home</Link>
+					<Link href="/">Home</Link>
 				</li>
 				<li>
-					<Link>About</Link>
-				</li>
-				<li>
-					<Link>Posts</Link>
+					<Link href="/blog">Posts</Link>
 				</li>
 			</ul>
 		</nav>
