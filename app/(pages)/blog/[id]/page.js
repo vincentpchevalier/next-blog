@@ -1,7 +1,7 @@
 'use client';
 
-// import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 import styles from '../../../page.module.css';
 
@@ -14,6 +14,11 @@ function Post() {
 
 	const id = path.split('/').pop();
 	const post = blogposts.find((post) => post.id === +id);
+	const postIndex = blogposts.findIndex((post) => post.id === +id);
+
+	const prevPostIndex = postIndex > 0 ? postIndex - 1 : blogposts.length - 1;
+	const nextPostIndex = postIndex < blogposts.length - 1 ? postIndex + 1 : 0;
+
 	if (!post)
 		return (
 			<main className={styles.error}>
@@ -25,8 +30,15 @@ function Post() {
 		<main className={styles.main}>
 			<h2>{post.title}</h2>
 			<section className={styles.post}>
+				<Image src={post.img} alt={post.title} width={630} height={400} />
 				<p>{post.content}</p>
-				<Link href="/blog">Go Back</Link>
+			</section>
+			<section className={styles.postNav}>
+				<Link href={`/blog/${blogposts[prevPostIndex].id}`}>
+					← Previous Post
+				</Link>
+				<Link href="/blog">All Posts</Link>
+				<Link href={`/blog/${blogposts[nextPostIndex].id}`}> Next Post →</Link>
 			</section>
 		</main>
 	);
