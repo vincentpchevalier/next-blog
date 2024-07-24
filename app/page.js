@@ -1,6 +1,8 @@
+import styles from './page.module.css';
+
 export default function Home() {
 	return (
-		<main>
+		<main className={styles.main}>
 			<h1>My Blog</h1>
 		</main>
 	);
