@@ -67,6 +67,12 @@ a {
 	color: greenyellow;
 }
 
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+}
+
 ul {
 	list-style: none;
 }

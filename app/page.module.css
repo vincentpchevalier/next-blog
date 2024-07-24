@@ -42,3 +42,24 @@
 	margin-bottom: 1rem;
 	font-size: 1.4rem;
 }
+
+.post {
+	max-width: 60svw;
+}
+
+.post > * {
+	margin-bottom: 1.5rem;
+}
+
+.error {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.errorMsg {
+	font-size: 2rem;
+	font-weight: 300;
+	color: coral;
+}
