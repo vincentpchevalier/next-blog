@@ -2,11 +2,11 @@
 
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styles from '../../../page.module.css';
 
 import blogposts from '../../../data/blogposts';
-import Link from 'next/link';
 
 function Post() {
 	const path = usePathname();
