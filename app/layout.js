@@ -4,8 +4,6 @@ import Container from './components/Container';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import styles from './page.module.css';
-
 const merriweather = Merriweather({
 	subsets: ['latin'],
 	weight: ['300', '400', '700'],
